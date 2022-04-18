@@ -50,7 +50,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/user-service/(?<segment>.*), /$\{segment}
-            # - AuthorizationHeaderFilter # GET
+            - AuthorizationHeaderFilter # 로그인 설정 후 필터 사용
 
         - id: user-service
           uri: lb://USER-SERVICE
