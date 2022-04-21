@@ -11,9 +11,11 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
 
-token:
-  expiration_time: 8640000
-  secret: JWTSECRET123456789123456789
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace
 
 spring:
   application:
